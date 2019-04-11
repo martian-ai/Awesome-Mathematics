@@ -1,2 +1,16 @@
-# Awesome-Mathematics
-Mathematical Knowledge used by Artificial Intelligence
+# Outline of Math
+
+### 图论
+### 群论
+### 无尺度网络
+### 动力学网络
++ 规则网络
++ 复杂网络
+	+ 随机网络
+	+ 小世界网络
+	+ 自相似网络
+
+### 黎曼几何
+### 泛函
+### 变分
+### 最优化
