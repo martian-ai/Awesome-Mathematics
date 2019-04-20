@@ -16,11 +16,11 @@
 
 ## Joint Entropy --- H(X, Y)
 
-$H(X,Y) = - \sum_x \sum_y P(x,y)log_2[P(x,y)]$
++ $H(X,Y) = - \sum_x \sum_y P(x,y)log_2[P(x,y)]$
 
-$$H(X, Y)  \geq max [H(X), H(Y)] $$
++ $H(X, Y)  \geq max [H(X), H(Y)] $
 
-$$H(X, Y)  \leq H(X) + H(Y) $$
++ $H(X, Y)  \leq H(X) + H(Y) $
 
 ## Condition Entropy --- H(Y|X)
 
@@ -40,8 +40,8 @@ $$H(X, Y)  \leq H(X) + H(Y) $$
 ## Cross Entropy --- H(p, q)
 
 - 两个概率分布P(x), Q(x)，其中P(x)表示真实分布，Q(x)表示非真实分布
-- $$ H(P, Q) = -  \sum P(x) log \frac{1}{Q(x)} $$
-- $$ H(P, Q) = -  \int P(x) log \frac{1}{Q(x)} $$
+- $ H(P, Q) = -  \sum P(x) log \frac{1}{Q(x)} $
+- $ H(P, Q) = -  \int P(x) log \frac{1}{Q(x)} $
 
 ## Relative Entropy --- KL(p||q)[5]
 
@@ -51,11 +51,11 @@ $$H(X, Y)  \leq H(X) + H(Y) $$
 
 + 在信息论中,相对熵等价于两个概率分布的信息熵的差值
 
-+ $$KL(P||Q) = \sum P(x) log \frac{P(x)}{Q(x)}$$
++ $KL(P||Q) = \sum P(x) log \frac{P(x)}{Q(x)}$
 
-+  $$KL(P||Q) = \int P(x) log \frac{P(x)}{Q(x)}$$
++  $KL(P||Q) = \int P(x) log \frac{P(x)}{Q(x)}$
 
-+ $$ KL(P||Q) = H(P, Q) - H(Q)$$
++ $ KL(P||Q) = H(P, Q) - H(Q)$
 
 	+ H(P, Q) Cross Entropy
 
@@ -65,7 +65,7 @@ $$H(X, Y)  \leq H(X) + H(Y) $$
 
 		的编码长度等于$log \frac{1}{P(x)}$, 来为符合分布Q(x) 的字符编码，那么表示这些字符就会比理想情况多用一些比特数。相对熵就是用来衡量这种情况下平均每个字符多用的比特数，因此可以用来衡量两个分布的距离
 
-	+ $$KL(P||Q) = - \sum P(x) log \frac{1}{P(x)} + \sum P(x) log \frac{1}{Q(x)} = \sum P(x) log \frac{P(x)}{Q(x)} $$ 
+	+ $KL(P||Q) = - \sum P(x) log \frac{1}{P(x)} + \sum P(x) log \frac{1}{Q(x)} = \sum P(x) log \frac{P(x)}{Q(x)} $
 
 + 性质
 
@@ -75,7 +75,7 @@ $$H(X, Y)  \leq H(X) + H(Y) $$
 
  ## Jensen-Shannon Divergence
 
-+ $$ JS(P||Q) = \frac{1}{2} KL(P(x) || \frac{P(x)+Q(x)}{2} +  \frac{1}{2} KL(Q(x) || \frac{P(x)+Q(x)}{2}$$
++ $ JS(P||Q) = \frac{1}{2} KL(P(x) || \frac{P(x)+Q(x)}{2} +  \frac{1}{2} KL(Q(x) || \frac{P(x)+Q(x)}{2}$
 + 性质
 	+ 值域[0,1]
 	+ 对称性 JS(P||Q) = JS(Q||P)
@@ -100,8 +100,8 @@ $$H(X, Y)  \leq H(X) + H(Y) $$
 
 ## Reference
 
-+ [ 1 ]: [条件熵 demo](<https://zhuanlan.zhihu.com/p/26551798>)
-+ [ 2 ]:[相对熵](<https://baike.baidu.com/item/%E7%9B%B8%E5%AF%B9%E7%86%B5/4233536?fr=aladdin>)
++ [ 1 ] : [条件熵 demo](<https://zhuanlan.zhihu.com/p/26551798>)
++ [ 2 ] : [相对熵](<https://baike.baidu.com/item/%E7%9B%B8%E5%AF%B9%E7%86%B5/4233536?fr=aladdin>)
 
 ## 不理解
 
