@@ -53,6 +53,9 @@
 
 ## [信息增益等](<https://github.com/Apollo2Mars/Algorithms-of-Artificial-Intelligence/blob/master/2-Ensemble-Learning/0-Decision-Tree.md>)
 
+## 应用
++ [ML 中的特征选择](https://github.com/Apollo2Mars/Algorithms-of-Artificial-Intelligence/tree/master/9-Nature-Language-Processing/2-1-Text-Classification)
+
 
 
 ## Reference
