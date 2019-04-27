@@ -24,7 +24,7 @@
 
     设$C\subseteq\Re^{n}$是非空的闭凸锥，$y\in \Re^{n}\wedge y \notin C $,则存在$P\in \Re^{n}\setminus \\{0\\},st: \forall x\in S,P^{T}x<0<P^{T}y$
 
-11. 凸集与凸集的分离定理：设$S_{1},S_{2}\subset \Re^{n}$是非空的凸集。若$S_{1}\cap S_{2}=\varnothing$,则存在$P\in \Re^{n}\setminus \\{0 \\},st:P^{T}x^{1}\leq P^{T}x^{2},\forall x^{1}\in S_{1},x^{2}\in S_{2}$
+11. 凸集与凸集的分离定理：设$S_{1},S_{2}\subset \Re^{n}$是非空的凸集。若$S_{1}\cap S_{2}=\varnothing $,则存在$P\in \Re^{n}\setminus \\{0 \\},st:P^{T}x^{1}\leq P^{T}x^{2},\forall x^{1}\in S_{1},x^{2}\in S_{2}$
 
 12. 凸函数：给定函数$f$及其支撑凸集$C$,若$\forall x,y \in C,\theta \in \left [0,1 \right],f(\theta x+\left(1-\theta\right)y)\leq \theta f(x)+(1-\theta)f(y)$
 
