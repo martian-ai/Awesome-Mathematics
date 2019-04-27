@@ -4,11 +4,11 @@
 
 2. 函数的支撑集：即函数的定义域（但是由于不是所有的函数都定义在具有域代数结构的集合上，所以一般采用支撑集而非定义域）
 
-3. 凸集：给定集合$C$，若$\forall x,y \in C ,\theta\in \left [0,1\right], \exist ((\theta x +(1-\theta)y)\in C)$
+3. 凸集：给定集合$C$，若$\forall x,y \in C ,\theta\in \left [0,1\right], \exists ((\theta x +(1-\theta)y)\in C)$
 
-4. 锥：给定集合$C$，若$\forall x\in C ,\theta\in \Re], \exist (\theta x\in C)$
+4. 锥：给定集合$C$，若$\forall x\in C ,\theta\in \Re], \exists (\theta x\in C)$
 
-5. 凸锥：给定集合$C$，若$\forall x,y \in C ,a,b\in \Re^{+},\exist （(ax+by)\in C）$
+5. 凸锥：给定集合$C$，若$\forall x,y \in C ,a,b\in \Re^{+},\exists （(ax+by)\in C）$
 
 6. 超平面：给定$n$空间$\Re^{n}$,任意一个子集$\Re^{n-1}$叫做空间$\Re^{n}$的超平面。
 
