@@ -36,7 +36,7 @@
 
 16. 次微分性质：如果$f$在$x$处可微，则$\partial f(x)=\left\{\Delta f(x)\right\}$
 
-17. 正定矩阵：给定矩阵$A\in M_{\Re}^{n}$,若$\forall P\in \Re^{n},P\neq 0,\exist (P^{T}AP>0)$,则称该矩阵是正定矩阵
+17. 正定矩阵：给定矩阵$A\in M_{\Re}^{n}$,若$\forall P\in \Re^{n},P\neq 0,\exists (P^{T}AP>0)$,则称该矩阵是正定矩阵
 
 18. 正定矩阵的性质：
 
@@ -48,7 +48,7 @@
 
     4)  矩阵$A$正定的充分必要条件是其各阶主子式都大于零
 
-19. 半正定矩阵：给定矩阵$A\in M_{\Re}^{n}$,若$\forall P\in \Re^{n},P\neq 0,\exist (P^{T}AP\geq0)$,则称该矩阵是半正定矩阵
+19. 半正定矩阵：给定矩阵$A\in M_{\Re}^{n}$,若$\forall P\in \Re^{n},P\neq 0,\exists (P^{T}AP\geq0)$,则称该矩阵是半正定矩阵
 
     
 
