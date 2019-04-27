@@ -18,7 +18,7 @@
 
 9. 点与闭凸集的分离定理：对于非空闭凸集与其外一点，一定能够找到一个超平面，使得点与凸集位于超平面的两侧，即超平面严格分离这两者：
 
-   设$S\subseteq\Re^{n}$是非空的闭集合，$y\in \Re^{n}$,若$y\notin S$，则存在$P\in \Re^{n}\setminus \left \{0\right\},a \in \Re,st: \forall x\in S,P^{T}x<a<P^{T}y$
+   设$S\subseteq\Re^{n}$是非空的闭集合，$y\in \Re^{n}$,若$y\notin S$，则存在$P\in \Re^{n}\setminus \\{0\\},a \in \Re,st: \forall x\in S,P^{T}x<a<P^{T}y$
 
 10. 点与闭凸锥分离定理：对于非空凸锥与其外一点，一定能够找到一个过原点的超平面，让点与凸锥位于超平面两侧，即超平面严格分离这两点：
 
