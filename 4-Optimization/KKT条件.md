@@ -22,19 +22,19 @@
 
 10. 点与闭凸锥分离定理：对于非空凸锥与其外一点，一定能够找到一个过原点的超平面，让点与凸锥位于超平面两侧，即超平面严格分离这两点：
 
-    设$C\subseteq\Re^{n}$是非空的闭凸锥，$y\in \Re^{n}\wedge y \notin C $,则存在$P\in \Re^{n}\setminus \left \{0\right\},st: \forall x\in S,P^{T}x<0<P^{T}y$
+    设$C\subseteq\Re^{n}$是非空的闭凸锥，$y\in \Re^{n}\wedge y \notin C $,则存在$P\in \Re^{n}\setminus \\{0\\},st: \forall x\in S,P^{T}x<0<P^{T}y$
 
-11. 凸集与凸集的分离定理：设$S_{1},S_{2}\subset \Re^{n}$是非空的凸集。若$S_{1}\cap S_{2}=\varnothing$,则存在$P\in \Re^{n}\setminus \left\{0\right\},st:P^{T}x^{1}\leq P^{T}x^{2},\forall x^{1}\in S_{1},x^{2}\in S_{2}$
+11. 凸集与凸集的分离定理：设$S_{1},S_{2}\subset \Re^{n}$是非空的凸集。若$S_{1}\cap S_{2}=\varnothing$,则存在$P\in \Re^{n}\setminus \\{0\\},st:P^{T}x^{1}\leq P^{T}x^{2},\forall x^{1}\in S_{1},x^{2}\in S_{2}$
 
 12. 凸函数：给定函数$f$及其支撑凸集$C$,若$\forall x,y \in C,\theta \in \left [0,1 \right],f(\theta x+\left(1-\theta\right)y)\leq \theta f(x)+(1-\theta)f(y)$
 
 13. 凹函数：给定函数$f$及其支撑凸集$C$,若$\forall x,y \in C,\theta \in \left [0,1 \right],f(\theta x+\left(1-\theta\right)y)\geq \theta f(x)+(1-\theta)f(y)$
 
-14. 函数的上方集：设$f$是定义在凸集$C\in \Re^{n}$上的函数，函数的上方图定义为：$[f,C]=\left \{(x,r)\in \Re^{n}\times\Re|x\in C,f(x)\leq r\right\}$
+14. 函数的上方集：设$f$是定义在凸集$C\in \Re^{n}$上的函数，函数的上方图定义为：$[f,C]=\\{(x,r)\in \Re^{n}\times\Re|x\in C,f(x)\leq r\\}$
 
 15. 次梯度次微分：设$f$是定义在$\Re^{n}$上的函数，如果向量$p\in \Re^{n}$满足：$f(y)\geq f(x)+p^{T}(y-x),\forall y\in \Re^{n}$,则称$p$ 为$f$在$x$处的次梯度(subgradient)；$f$在$x$处的所有次梯度的集合记$\partial f(x)$,称为$f$在$x$处的次微分(subdifferential)
 
-16. 次微分性质：如果$f$在$x$处可微，则$\partial f(x)=\left\{\Delta f(x)\right\}$
+16. 次微分性质：如果$f$在$x$处可微，则$\partial f(x)=\\{\Delta f(x)\\}$
 
 17. 正定矩阵：给定矩阵$A\in M_{\Re}^{n}$,若$\forall P\in \Re^{n},P\neq 0,\exists (P^{T}AP>0)$,则称该矩阵是正定矩阵
 
