@@ -1,18 +1,18 @@
 # Information Theory
 ## 信息的度量-自信息量
 
-+ 描述一条信息自己的大小
++ 描述一个事件信息量的大小
 
-+ 公式 $h(x) = -log_2 p(x)$
++ 公式 $I(x) = -log_2 p(x)$
   + 一个事件发生的概率越大，其信息量越小， 因此概率取了负对数（保证非负）
-  + 两个独立事件X， Y 的联合概率是可乘的，即$P(X,Y) = P(X)P(Y)$ ， 则有X， Y 同时发生的信息量是可以相加的 $h(XY) = h(X) + h(Y)$
+  + 两个独立事件X， Y 的联合概率是可乘的，即$P(X,Y) = P(X)P(Y)$ ， 则有X， Y 同时发生的信息量是可以相加的 $I(XY) = I(X) + I(Y)$
 + demo
   + 英文26个字母，每个字母出现的概率是相等的，那么其中一个字母的自信息量的大小是 $h = - log_2 {\frac{1}{26}}$
 
 ## 信息不确定性的度量：熵
 
-+ 整个系统的信息量
-+ 公式 $H = \sum_{i=1}^{n} p_i h_i = -\sum_{i=1}^{n}p_i log_2 p_i$ 
++ 整个系统的平均信息量
++ 公式 $H = \sum_{i=1}^{n} p_i I_i = -\sum_{i=1}^{n}p_i log_2 p_i$ 
 
 ## Joint Entropy --- H(X, Y)
 
@@ -30,18 +30,18 @@
 	- 当上下文中出现 ‘美国’， ‘总统’ 等词的时候 可翻译为 ‘布什’
 	- 只用当随机变量X 和 Y 有关系时 才能减小不确定性
 
-## Mutual Information --- H(X;Y)
+## Mutual Information --- I(X;Y)
 
 + 变量之间的相关程度
-+ $H(X;Y) = \sum_{y \in Y} \sum_{x \in X} p(x, y) log(\frac{p(x,y)}{p(x)p(y)}) = H(X)+ H(Y) - H(X,Y)$
++ $I(X;Y) = \sum_{y \in Y} \sum_{x \in X} p(x, y) log(\frac{p(x,y)}{p(x)p(y)}) = H(X)+ H(Y) - H(X,Y)$
 + 应用
 	+ PMI
 
 ## Cross Entropy --- H(p, q)
 
 - 两个概率分布P(x), Q(x)，其中P(x)表示真实分布，Q(x)表示非真实分布
-- $ H(P, Q) = -  \sum P(x) log \frac{1}{Q(x)} $
-- $ H(P, Q) = -  \int P(x) log \frac{1}{Q(x)} $
+- $ H(P, Q) = \sum P(x) log \frac{1}{Q(x)} $
+- $ H(P, Q) = \int P(x) log \frac{1}{Q(x)} $
 
 ## Relative Entropy --- KL(p||q)[2]
 
