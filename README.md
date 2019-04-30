@@ -38,33 +38,53 @@
 - 张量
 
 # 概率论
-- 概率图模型
-	- 朴素贝叶斯
-	- HMM ： 联合概率
-	- CRF ： 条件概率
-- 各种分布
-	- 模型的初始化
-	- 生成模型的输入
+- 组合分析
+- 概率论公理
+- 条件概率和独立性
+- 随机变量
+- 连续型随机变量
+- 随机变量的联合分布
+- 期望的性质
+- 极限定理
 
 # 数理统计
-- 参数估计
-	    - MLE：最大似然
-	    - EM：最大熵
-- 假设检验
+
++ 统计量和抽样分布
++ 点估计
++ 区间估计
++ 假设检验
++ 分布的检验
+
+- Measure Theory
+- Laws of Large Numbers
+- Central Limit Theorems
+- Martingales
+- Markov Chains
+- Ergodic Theorems(遍历定理)
+- Brownian Motion(布朗运动)
+- Brownian Embeddings and 
+- Multidimensional Brownian Motion
 
 # 信息论
-- 熵
-- 交叉熵
-- KL 散度
 
-- 应用
-	- 决策树构建，子节点选择
-	- loss 函数设计
-	  - 交叉熵，KL 散度
-	
+- 熵，相对熵，互信息
+- 渐进均分性
+- 随机过程的熵率
+- 数据压缩
+- 博弈与数据压缩
+- 信道容量
+- 微分熵
+- 高斯信道
+- 失真率理论
+- 信息论与统计学
+- 最大熵
+- 通用信源编码
+- 科尔戈莫罗夫复杂度
+- 网络信息论
+- 信息论中的不等式
 
 # 图论
-- CRF 的一般表示
+- 
 
 
 # 微分几何
@@ -72,5 +92,33 @@
 # 函数论与泛函分析
 
 # 最优化
+
+
+
+# Reference
+
++ 概率论
+  + Probability: Theory and Examples. 5th Edition Durrett 
+  + 钟开莱
+  + https://services.math.duke.edu/~rtd/PTE/pte.html
++ 信息论
+  + [信息论基础](http://home.ustc.edu.cn/~yang96/Elements_of_Information_Theory-second_edition.pdf)
++ 图论
+  + Graph theory Bondy and Murty
+  + 图论及其应用 徐俊明
+  + Extremal graph theory
+  + Noga Alon,Joel Spencer的《The Probabilistic Method》
+  + Bela Bollobas的《Extremal Graph Theory》
+  + 图匹配
+    + Dorit Hochbaum 《Approximation Algorithms for NP-Hard Problems》
+    + Vijay Vazirani 《Approximation Algorithms》
+    + David Williamson David Shmoys 《The Design of Approximation Algorithms》
+  + 网络流
+    + Ahuja, Magnanti Orlin 《Network Flows: Theory, Algorithms, and Applications》
+  + 谱图论(Spectral Graph Theory)
+    + Fan R. K. Chung 《Spectral Graph Theory》
+  + A Beginner's Guide to Graph Theory (W.D. Wallis)
++ 数理统计
+  + [数理统计学](https://item.jd.com/11877691.html)
 
 
