@@ -160,6 +160,7 @@
   + 谱图论(Spectral Graph Theory)
     + Fan R. K. Chung 《Spectral Graph Theory》
   + A Beginner's Guide to Graph Theory (W.D. Wallis)
+  + series-parallel graph
 + 数理统计
   + [数理统计学](https://item.jd.com/11877691.html)
 + 微分几何
