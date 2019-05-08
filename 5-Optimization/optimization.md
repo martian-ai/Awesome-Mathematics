@@ -77,3 +77,9 @@
 5.3 $l_{1}$精确罚函数
 
 5.4 逐步二次规划法
+
+
+
+**Reference Books:**
+
+https://item.jd.com/17985044812.html
