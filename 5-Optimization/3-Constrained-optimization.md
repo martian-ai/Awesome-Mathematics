@@ -30,18 +30,14 @@
   + 一般例子
 
     $$ min f(x)$$
-
-    $$ st. $$
-
-    ```
     $$
-    p(x) = 
-    \begin{cases}
-      p, & x = 1 \\
-      1 - p, & x = 0
-    \end{cases}
+    \begin{eqnarray}
+    f(x) = a_nx^n \\
+    g(x) = x^2
+    \end{eqnarray}
     $$
-    ```
+
+
 
 + Step 2 **等式约束优化** 转化 **无约束优化**
   + Langrage 乘数法
