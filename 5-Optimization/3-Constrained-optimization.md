@@ -1,6 +1,6 @@
 # Summary of Constrained Optimization
 
-# Use in Machine Learing
+# Use in Machine Learning
 
 + SVM
 + Maximum Entropy Model
@@ -28,7 +28,6 @@
   \end{eqnarray}
   $$
   
-
 + 主要思想
 
   ![](http://ww3.sinaimg.cn/large/006tNc79ly1g37pxdoa1dj30k00a8wet.jpg)
@@ -40,6 +39,7 @@
     ![](https://pic4.zhimg.com/80/v2-dcf3439670719b2ac1d8878bef7d80cf_hd.jpg)
 
 + Step 2 **等式约束优化** 转化 **无约束优化**
+  
   + Langrage 乘数法
 
 # Reference

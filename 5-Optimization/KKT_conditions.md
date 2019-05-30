@@ -112,7 +112,7 @@
 
    **KKT条件为**：
 
-   如果$x^{*}$是上述问题的局部极小点，当约束函数都是线性函数或者$[d(ci(x^{*})],d(cj(x^{*}))]$线性无关时，存在$\lambda_{i}\in \Re ,i\in E,\lambda_{j}\ge0,j\in I$使得一下条件满足：
+   如果$x^{*}$是上述问题的局部极小点，当约束函数都是线性函数或者$[d(ci(x^{*})],d(cj(x^{*}))]$线性无关时，存在$\lambda_{i}\in \Re ,i\in E,\lambda_{j}\ge0,j\in I$使得以下条件满足：
 
    $\begin {matrix} d(f(x)+\sum_{i\in E \cup I} \lambda_{i}ci(x)|_{x=x^{*}}=0\\ci(x)=0;i\in E\\cj(x)\le0;j\in I\\ \lambda_{k}ck(x)=0;k\in E\cup I \end {matrix}$
 
