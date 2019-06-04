@@ -84,6 +84,9 @@ $$ \begin{matrix} \underset{x\in \Re}{min} f(x) \\c_{i}(x)\le z; \forall i \in I
 给定扰动问题$w(z)$上的一点$(z_{0},w(z_{0}))$,取$w(z)$在该点处的支撑超平面的法向量为$(\lambda_{0},1)$,则过该点的超平面为$\lambda z+r-(\lambda_{0} z_{0}+w(z_{0}))=0$,该超平面在$R$轴上的截距为$r=\lambda_{0} z_{0}+w{(z_{0})}$;由拉格朗日乘子的性质可知，$\lambda_{0}$为拉格朗日函数​ $\underset{x\in \Re}{inf}(f(x)+\lambda (c(x)-z_{0}))$的拉格朗日乘子，故有$r=\lambda_{0}z_{0}+\underset{x\in\Re}{inf}（f(x)+\lambda_{0} (c(x)-z_{0}）=\underset{x\in\Re}{inf}(f(x)+\lambda_{0} c(x)))$。由于所有的拉格朗日乘子满足$\lambda\ge 0$ ,故截距最大的值为$\underset {\lambda\ge 0}{max}(\underset{x\in \Re}{min}(f(x)+\lambda c(x))$
 
 称函数$d(\lambda)=\underset{x\in\Re}{f(x)+\lambda c(x)}$为原始问题的对偶函数，可以肯定的是凸优化问题的对偶函数一定是凹函数，这可以通过凹函数的定义很好的证明。
+
+**可以证明，任何优化问题的对偶问题都是凹函数**
+
 称最优化问题$\underset{\lambda\ge 0}{d(\lambda)}$为原始优化问题的对偶问题。
 
 #### 3.2 强对偶和弱对偶
