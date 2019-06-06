@@ -76,18 +76,17 @@
 
 5.3 $l_{1}$精确罚函数
 
+5.4 逐步二次规划法
+
 
 # New Add
 
 + 帕累托最优
 + 纳什均衡
 
-5.4 逐步二次规划法
-=======
-5.4 逐步二次规划法
 
 
+# Reference
 
-**Reference Books:**
-
-https://item.jd.com/17985044812.html
++ https://nlopt.readthedocs.io/en/latest/NLopt_Python_Reference/
++ https://item.jd.com/17985044812.html
