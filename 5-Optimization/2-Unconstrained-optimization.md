@@ -55,8 +55,8 @@
 
 + 利用牛顿法求解所有一节导数为0的点,   求解过程如下:
 
-	+ Step 1 : 取初始点 $x^{\\(0\\)}$,  k = 0
-	+ Step 2 : 根据二阶泰勒展开,将 $ \nabla f(x)$ 在 $x^{\\(k\\)}$ 进行展开, 求得$g_k$,  若$g_k < \epsilon$ , 则终止迭代，得到近似解　$x^\star$ , 否则继续进行Step 3
+	+ Step 1 : 取初始点 $x^{(0)}$,  k = 0
+	+ Step 2 : 根据二阶泰勒展开,将 $ \nabla f(x)$ 在 $x^{(k)}$ 进行展开, 求得$g_k$,  若$g_k < \epsilon$ , 则终止迭代，得到近似解　$x^\star$ , 否则继续进行Step 3
 	+ Step 3:  计算 $H_k$,  并获得下一个跌点的坐标 $x^{k+1}$
 		+  $\nabla f(x^{(k)}) = g_k + H_k(x - x^{(k)}) ,  H_k = H(x^{(k)})$
 		+ $ g_k + H_k(x^{k+1} - x^{k}) = 0 $
@@ -77,7 +77,7 @@
 
 # 拟牛顿法
 
-+ 牛顿法中, 需要计算 $H^{-1}_k$ , 计算较为复杂, 考虑用另外一个n阶矩阵 $G_k = G(x^{\\(k\\)})$ 来代替
++ 牛顿法中, 需要计算 $H^{-1}_k$ , 计算较为复杂, 考虑用另外一个n阶矩阵 $G_k = G(x^{(k)})$ 来代替
 
 + $H_k$ 满足的条件（拟牛顿条件）
 
@@ -87,7 +87,7 @@
 
 	+ $f(x) = f(x^{(k)}) - \lambda g_k^T H_k^{-1} g_k^T$
 
-	+ 因为　$H_k$ 正定, 所以　$H_k^{-1} $ 正定，当$\lambda$ 为一个充分小的正数时, 总有$f(x) < f(x^{\\(k\\)})$
+	+ 因为　$H_k$ 正定, 所以　$H_k^{-1} $ 正定，当$\lambda$ 为一个充分小的正数时, 总有$f(x) < f(x^{(k)})$
 
 + 拟牛顿将$G_k$ 当做 $H_k$ 的近似,  近似条件如下
 
@@ -100,19 +100,22 @@
 
 # DFP(Davidon-Fletcher-Powell)
 
++  $G_0$ 正定的
 +  $G_{k+1} $ 由　$G_k$ 加上两个附加项构成
 + $G_{k+1} = G_{k} + P_k + Q_k$
-+ 令 $y_k = g_{k+1} - g_{k}$,   $\delta_k = x^{\\(k+1\\)} - x^{\\(k\\)}$
++ 令 $y_k = g_{k+1} - g_{k}$,   $\delta_k = x^{(k+1)} - x^{(k)}$
 + $G_{k+1}y_k　= G_{k}  y_k+ P_k y_k + Q_k y_k$
 + 为了使$G_{k+1}$ 满足拟牛顿条件, 可使得$P_k$ 和 $Q_k$ 满足
 	+ $P_k y_k = \delta_k$ 
 	+ $Q_k y_k = -G_k y_k$
-	+ 即  $G_{k+1}y_k =  x^{\\(k+1\\)} - x^{\\(k\\)}$
+	+ 即  $G_{k+1}y_k =  x^{(k+1)} - x^{(k)}$
 + 求解得
 	+ $P_k = \frac{\delta_k \delta_k^T}{\delta_k^T y_k}$
 	+ $Q_k = - \frac{G_k y_k y_k^T G_k}{y_k^TG_ky_k}$
 + 则有
 	+ $G_{k+1} = G_{k} + \frac{\delta_k \delta_k^T}{\delta_k^T y_k}   - \frac{G_k y_k y_k^T G_k}{y_k^TG_ky_k}$
++  $P_k$ $Q_k$ 的求解过程？
++  正定？
 
 # BFGS
 
@@ -130,6 +133,10 @@
 + $G_{k+1} = \alpha G^{DFP} + (1-\alpha) G^{BFGS}$
 
 
+
+# Usage
+
++ 
 
 # Reference
 
