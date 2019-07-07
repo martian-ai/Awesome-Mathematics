@@ -51,22 +51,48 @@
     非精确线搜索方法和精确线搜索的方法主要差异在于线搜索方法的第二步，即：寻找子问题的解的问题，两者的差异性体现在一个求解最优解，一个给出近似解。
 
     既然子问题中给出下降方向的可行解无法保证线搜索方法收敛，或者收敛于局部最优解，子问题的近似的解的求解需要满足什么准则才能保证线搜索方法收敛并收敛域局部极小点呢：
+    
+15. **非精确线搜索收敛准则**
 
-    **非精确线搜索收敛准则**
+    
 
     原优化问题$f(x)$在$x_{0}$处给定下降方向$p$则精确线搜索问题的子问题为$\underset{\alpha\ge0}{min}(\phi (\alpha)),where, \phi(\alpha)=f(x_{0}+\alpha p)$
 
     非精确线搜索问题表示为找到$\alpha_{0}$使得$\phi(\alpha_{0})\le \phi(\alpha)$
 
+    
+    
     1）$armijo$准则
-
+    
     满足如下条件的点$\alpha_{0}$：
     
     a) $\phi (\alpha_{0}) \le \phi(0)+\rho \phi^{’}(0)\alpha_{0},\rho\in(0,1)$
     
     b) $\exist \lambda \in(0,1).st.\phi( \alpha_{0}/\lambda)>\phi(0)+\rho \phi^{‘}(0)\alpha_{0}/\lambda$
     
+    ----------------------------------------
     
+    基于armijo准则非精确线搜索方法
+    
+    Initialization: $\alpha_{0},\lambda$
+    
+    if $\phi (\alpha_{0}) \le \phi(0)+\rho \phi^{’}(0)\alpha_{0},\rho\in(0,1)$
+    
+    do  
+    
+    ​	$\alpha_{0}=\alpha_{0}/\lambda$
+    
+    while $\phi (\alpha_{0}) > \phi(0)+\rho \phi^{’}(0)\alpha_{0},\rho\in(0,1)$
+    
+    else
+    
+    do 
+    
+    ​	$\alpha_{0}=\alpha_{0} \lambda$
+    
+    while $\phi (\alpha_{0}) \le \phi(0)+\rho \phi^{’}(0)\alpha_{0},\rho\in(0,1)$
+    
+    -------------------------------------------------
     
     2）Goldstein 准则
     
@@ -76,33 +102,39 @@
     
     b)$\phi (\alpha_{0}) \ge \phi(0)+(1-\rho) \phi^{’}(0)\alpha_{0},\rho\in(0,0.5)$
     
+    该准则保证二次函数的极小点满足该准则；
     
+    但是对于非二次函数的极小点不一定能够满足该准则
     
     3）Wolf准则
     
     满足如下条件的点$\alpha_{0}$：
     
-    $0<\rho<\sigma<1$
+    $0<\rho \le\sigma<1$
     
-    a) $\phi (\alpha_{0}) \le \phi(0)+\rho \phi^{’}(0)\alpha_{0},\rho\in(0,0)$
+    a) $\phi (\alpha_{0}) \le \phi(0)+\rho \phi^{’}(0)\alpha_{0},\rho\in(0,1 )$
     
     b) $\phi^{’}(\alpha_{0})\ge \sigma \phi^{‘}(0)$
     
-    
+    该准则能够保证所有函数的极小点满足该准则点
     
     4）强wolf准则
     
     $0<\rho<\sigma<1$
     
-    a) $\phi (\alpha_{0}) \le \phi(0)+\rho \phi^{’}(0)\alpha_{0},\rho\in(0,0)$
+    a) $\phi (\alpha_{0}) \le \phi(0)+\rho \phi^{’}(0)\alpha_{0},\rho\in(0, 1)$
     
     b) $\left | \phi^{’}(\alpha_{0}) \right |\le -\sigma \phi^{‘}(0)$
+    
+    该准则具有更小的搜索范围，通过控制$\sigma$的值能够控制搜索的精度，当$\sigma=0$时，该准则退化为精确线搜索为题
     
     
     
     理论证明，线搜索中子问题中满足上述四种准则任何一个近似解都能收敛于局部最小解，当然上述准则也是有强约束的存在的，只有在这种约束满足时上述结论才成立。
     
-    **非精确线搜索方法**
+    -----------------------------------------------------------------------------
+    
+16. **非精确线搜索方法**
     
     采用迭代方法寻找线搜索子问题的满足强wolf准则的点
     
@@ -114,9 +146,200 @@
     
     b) **分割阶段**(secting phase):寻找覆盖$[m_{i},n_{i}]$的一个包含序列$[m_{j},n_{j}]$使得$[m_{j},n_{j}]\subset [m_{i},n_{i}]$, $\underset {j\rightarrow\infty}{lim}\left| m_{j}-n_{j}\right|=0$
     
+    ---------------------------------------------------
+    
+    **恰当覆盖**
+    
+    给定迭代序列$\alpha_{0},\alpha_{1},\alpha_{2},...\alpha_{n}$
+    
+    恰当覆盖的定义：
+    
+    1）$a$是最好的测试点即$a=arg\underset{i\in [0,n]}{min} \alpha_{i}|\phi (\alpha_{i}) \le \phi(0)+\rho \phi^{’}(0)\alpha_{i},\rho\in(0,1)$
+    
+    2)	$b=\alpha_{i}|i\in[1,n]$，且满足$(b-a)\phi(a)^{‘}<0\wedge\left |(\phi(a)^{’}\right |\ge-\sigma \phi(0)^{‘}$
+    
+    3)	满足$\phi(b)>\phi(0)+\rho\phi(0)^{’}b||\phi(b)\ge\phi(a)$
+    
+    **可以证明，恰当覆盖包含满足强wolf条件点**
+    
+    可接受下界$\bar{\phi}$的定义: $\forall \alpha \ge 0,st,\phi(\alpha) \le \bar{\alpha}$,的界线为可接受下界，即任何使目标函数值小于结界的变量都是可接受点
+    
+    通过可接受点可以约束一下变量的搜索范围：
+    
+    即$\alpha\in [0,\mu]|\mu=\frac{\bar{\phi}-\phi(0)} {\rho\phi(0)^{‘}}$
+    
+    -------------------------------------------------------
+    
+    **一种基于wolf强约束准则的非精确线搜索算法流程**
+    
+    （1）**Bracketing Phase**
+    
+    -------------------------------
+    
+    **Algorithm1**
+    
+    **Initialization:**	$\alpha(0)=0;\alpha(1)\in (0,\mu);i=0;a_{0}=b_{0}=\alpha(0)；\tau_{1}=9$
+    
+    **Loop:**	$i=i+1$
+    
+    ​		**Part1:**判断当前迭代点$\alpha(i)$的值是否满足可接受下界$\bar{\phi}$，如果是则终止迭代并输出当前迭代点为目标点	
+    
+    ​				if  $\phi(\alpha(i))\le\bar{\phi}$
+    
+    ​						return $\alpha(i)$
+    
+    ​						迭代终止
+    
+    ​				else to **Part2**
+    
+    ​		**Part2:**判断当前迭代点是否能够和前循环区间$[a_{i-1},b_{i-1}]$构成恰当覆盖，如果成立则终止迭代，将当前区间作为目标输出
+    
+    ​				if $\phi(\alpha_{i})>\phi(0)+\rho\phi(0)\alpha_{i}||\phi(\alpha_{i})\ge\phi(\alpha_{i-1})$
+    
+    ​						$a_{i}=\alpha_{i-1};b_{i}=\alpha_{i}$
+    
+    ​						return $[a_{i},b_{i}]$
+    
+    ​						迭代终止
+    
+    ​				else to **Part3**
+    
+    ​		**Part3:** 判断当前迭代点是否满足强wolf准则的梯度约束条件，如果满足则终止迭代，将当前迭代点作为目标点输出
+    
+    ​				if $\left|\phi(\alpha_{i})^{’}\right |\le-\sigma\phi(0)^{‘}$
+    
+    ​						return $\alpha_ {i}$
+    
+    ​						迭代终止
+    
+    ​				else to **Part4**
+    
+    ​		**Part4:**判断当前迭代点是否能够和前循环区间$[a_{i-1},b_{i-1}]$构成恰当覆盖，如果成立则终止迭代，将当前区间作为目标输出
+    
+    ​				if $\phi(\alpha_{i})^{’}\ge 0$
+    
+    ​						$a_{i}=\alpha_{i};b_{i}=\alpha_{i-1}$
+    
+    ​						return $[a_{i},b_{i}]$
+    
+    ​						迭代终止
+    
+    ​				else to **Part5**
+    
+    ​		**Part5:**确定下次迭代的搜索区间
+    
+    ​				if $\mu\le 2\alpha_{i}-\alpha_{i-1}$
+    
+    ​						$\alpha_{i+1}=\mu$
+    
+    ​				else
+    
+    ​						$\alpha_{i}\in [2\alpha_{i}-\alpha_{i-1},min(\mu,\alpha_{i}+\tau_{1}(\alpha_{i}-\alpha_{i-1}))]$
+    
+    ​                return to **Loop**
+    
+    --------------------------------------------------------
+    
+    **算法说明**
+    
+    ​		1）Part5的搜索区间更新规则能够保证$\alpha_{0}<\alpha_{1}<...<\alpha_{n}$
+    
+    ​		2）Part2-Part4的条件保证迭代未终止时，$\alpha_{i}$满足如下条件
+    
+    ​		$(\phi(\alpha_{i})\le\phi(0)+\rho\phi(0)\alpha_{i})\wedge (\phi(\alpha_{i})^{’}< 0)\wedge(\phi(\alpha_{i})=\underset{k=1:i}{min}\phi(\alpha_{k})$
+    
+    ​		2）保证Part2和Part4的规则恒成立；同时也保证Part5区间更新规则的有效性；
+    
+    
+    
+    -------------------------------------------
+    
+    （2）**Sect ting Phase**
+    
+    
+    
+    **原理**： 对于bracketing phase 给出的恰当覆盖$[a_{0},b_{0}]$,sectting phase 部分是在该覆盖中找到一个新点$c$，如果$c$满足强wolf准则则迭代结束，否则产生一个新的恰当覆盖$[a_{1},b_{1}]$,其中$\left |(b_{1}-a_{1})\right|<\left |(b_{0}-a_{0})\right|$,并在其中寻找新得点，如此循环
+    
+    ----------------------------------------
+    
+    **Algorithm2**
+    
+    **Initialization:**	$[a_{0},b_{0}]$是一个恰当覆盖,$\tau_{2}=0.1;\tau_{3}=0.5;i=0$
+    
+    **Loop:**	$i=i+1$
+    
+    **Step1:**	在区间$（a_{i},b_{i}）$随机选择一个数$c$
+    
+    ​				$c\in[a_{i}+\tau_{2}(b_{i}-a_{i}),b_{i}-\tau_{3}(b_{i}-a_{i})]$
+    
+    **Step2:**	判断区间$[a_{i},c]$是否能够构成一个恰当覆盖
+    
+    ​				$if_{1}$ $\phi(c)>\phi(0)+\rho \phi(0)^{’}c ||\phi(c)\ge \phi(a)$
+    
+    ​						$[a_{i},c]$能够构成恰当覆盖
+    
+    ​						$a_{i+1}=a_{i};b_{i+1}=c$
+    
+    ​						return $[a_{i+1},b_{i+1}]$ to **Loop**
+    
+    ​				else 
+    
+    ​						判断点$c$是否满足强wolf准则的梯度条件
+    
+    ​						$if_{2}$ $\left|\phi(c)^{‘}\right|\le -\sigma\phi(0)^{’}$
+    
+    ​								return $c$
+    
+    ​								**迭代终止**
+    
+    ​						else
+    
+    ​								$a_{i+1}=c$
+    
+    ​								判断$[c,b_{i}]$能够构成恰当覆盖
+    
+    ​								$if_{3}$ $(b_{i}-a_{i})\phi(c)^{‘}<0$
+    
+    ​										$b_{i+1}=b$
+    
+    ​								else
+    
+    ​										$b_{i+1}=a_{i}$
+    
+    ​							    end $if_{3}$
+    
+    ​								return $[a_{i+1},b_{i+1}]$ to **Loop**
+    
+    ​						end $if_{2}$
+    
+    ​				end $if_{1}$
+    
+    **End Loop**
+    
+    ---------------------------------------------------------------
+    
+    **定理：**若$\sigma>\rho$且初始覆盖$[a_{0},b_{0}]$是一个恰当覆盖，则上述分割算法必定终止与满足强wolf准则条件的可接受点。
+    
+    
+    
+    ​						
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
     
     
 
+ 
