@@ -54,11 +54,7 @@
 + Convex optimization
 + https://zhuanlan.zhihu.com/p/27731819
 
-
-
-# KKT
-
-#### 基本概念--默认函数$f\in C^{n}$
+# Basic Concept
 
 1. **$C^{n}函数$**：$n$阶导数存在切连续的函数的集合（光滑函数：无穷阶导数存在且连续的函数$:=C^{\infty}$)
 
