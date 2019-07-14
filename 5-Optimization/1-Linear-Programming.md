@@ -16,9 +16,26 @@
 
 ## 线性规划的对偶问题
 
++ 原问题
+  $$
+  minimize \quad c^T x \\
+  subject  \quad Ax \geq b \\
+  A \geq 0
+  $$
+  
+
++ 对偶问题
+  $$
+  minimize \quad \lambda^T b \\
+  subject  \quad \lambda A \leq c^T \\
+  \lambda \leq 0
+  $$
+  
+
 
 
 # Reference
 
 + https://www.cnblogs.com/ECJTUACM-873284962/p/7097864.html
++ [运筹学导论](https://item.jd.com/1361402585.html)
 
