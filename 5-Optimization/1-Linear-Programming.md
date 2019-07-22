@@ -23,7 +23,6 @@
   A \geq 0
   $$
   
-
 + 对偶问题
   $$
   minimize \quad \lambda^T b \\
