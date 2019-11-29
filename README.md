@@ -171,6 +171,8 @@
 	+ [泛函分析讲义](<https://item.jd.com/34103778001.html>)
 + 最优化
 	+ [最优化理论与方法](<https://item.jd.com/11889948.html>)
+	
++ [Algebra, Topology, Differential Calculus, and Optimization Theory For Computer Science and Machine Learning](http://www.cis.upenn.edu/~jean/math-deep.pdf)
 
 
 
